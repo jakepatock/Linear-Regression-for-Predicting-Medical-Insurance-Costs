@@ -31,14 +31,15 @@ labels = data['charges'].values
 
 
 
-# #converting the data to numeric 
-# #male = 0, female = 1
-# x_data[x_data == 'male'] = 0
-# x_data[x_data == 'female'] = 1
 
-# #non-smoker = 0, smoker = 1, 
-# x_data[x_data == 'no'] = 0
-# x_data[x_data == 'yes'] = 1
+#converting the data to numeric 
+#male = 0, female = 1
+x_data[x_data == 'male'] = 0
+x_data[x_data == 'female'] = 1
+
+#non-smoker = 0, smoker = 1, 
+x_data[x_data == 'no'] = 0
+x_data[x_data == 'yes'] = 1
 
 # #northeast = 0, southeast = 1, northwest = 2, southwest = 3
 # x_data[x_data == 'northeast'] = 0
