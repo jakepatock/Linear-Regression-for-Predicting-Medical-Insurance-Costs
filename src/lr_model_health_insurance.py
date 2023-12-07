@@ -20,7 +20,6 @@ def standardize (X):
     #standardize the features
     return (X - feature_mean) / feature_std
     
-
 #set up the data 
 data = pd.read_csv('C:\Visual Studio Coding\pytorch\linear regression\Charges_Prediction\data\insurance.csv')
 #getting categoires to convert to numeric values 
@@ -43,11 +42,11 @@ train_features, test_features, train_labels, test_labels = skms.train_test_split
 train_data = tud.TensorDataset(train_features, train_labels)
 test_data = tud.TensorDataset(test_features, test_labels)
 
+
 #taking tensor datasets and feeding them to data loader, this returns a iterable of batches of data
 batch_size = 64
 train_loader = tud.DataLoader(train_data, batch_size=batch_size, shuffle=True)
 test_loader = tud.DataLoader(test_data, batch_size=batch_size)
-
 
 #setting up the model 
 n_samples, n_features = features.shape
